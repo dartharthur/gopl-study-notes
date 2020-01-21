@@ -8,6 +8,20 @@ import (
 	"strings"
 )
 
+func buildInputData(reps int, input []string) []string {
+	var built []string
+	for i := 0; i < reps; i++ {
+		built = append(built, input...)
+	}
+	return built
+}
+
+func echo(input []string) {
+	// start := time.Now()
+	fmt.Println(strings.Join(input, " "))
+	// fmt.Printf("%.5vms elapsed\n", time.Since(start).Milliseconds())
+}
+
 func main() {
-	fmt.Println(strings.Join(os.Args[1:], " "))
+	echo(os.Args[1:])
 }
