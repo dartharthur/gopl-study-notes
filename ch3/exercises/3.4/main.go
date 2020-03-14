@@ -15,6 +15,7 @@ func main() {
 		// there must be a standard/accepted way to convert query params to proper type
 		// this seems janky
 		color := strings.Join(params["color"][:], "")
+		// ignoring error is...not good
 		width, _ := strconv.ParseFloat(strings.Join(params["width"][:], ""), 64)
 		height, _ := strconv.ParseFloat(strings.Join(params["height"][:], ""), 64)
 		// ------------------------------------------------------------------------
